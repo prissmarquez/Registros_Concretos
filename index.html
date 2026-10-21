@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Registro de concreto</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Pantalla de acceso -->
+  <main id="pantalla-acceso" class="acceso" hidden>
+    <form id="form-acceso" class="tarjeta acceso-caja">
+      <h1>Registro de concreto</h1>
+      <p class="sutil">Clientes, obras y cotizaciones</p>
+      <label>Código de acceso del equipo
+        <input name="codigo" type="password" required autocomplete="current-password">
+      </label>
+      <label>Tu nombre (quién captura)
+        <input name="quien" required maxlength="100" autocomplete="name">
+      </label>
+      <button class="btn primario" type="submit">Entrar</button>
+      <p class="error" id="error-acceso" hidden></p>
+    </form>
+  </main>
+
+  <!-- Aplicación -->
+  <div id="app" hidden>
+    <header class="barra">
+      <a href="#/" class="marca">Registro de concreto</a>
+      <div class="barra-der">
+        <span class="sutil" id="quien-captura"></span>
+        <button class="btn chico" id="btn-salir" type="button">Salir</button>
+      </div>
+    </header>
+    <main id="vista" class="contenido"></main>
+  </div>
+
+  <!-- Formulario genérico en ventana -->
+  <dialog id="dialogo">
+    <form id="form-dialogo" method="dialog">
+      <h2 id="dialogo-titulo"></h2>
+      <div id="dialogo-campos" class="campos"></div>
+      <p class="error" id="dialogo-error" hidden></p>
+      <div class="acciones">
+        <button class="btn" type="button" id="dialogo-cancelar">Cancelar</button>
+        <button class="btn primario" type="submit" id="dialogo-guardar">Guardar</button>
+      </div>
+    </form>
+  </dialog>
+
+  <div id="aviso" class="aviso" hidden></div>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
