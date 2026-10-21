@@ -77,6 +77,20 @@ a {
 }
 
 /* Acceso */
+.logo-empresa {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.logo-acceso {
+  width: 220px;
+  justify-self: center;
+}
+.logo-barra {
+  width: 100px;
+  flex-shrink: 0;
+}
 .acceso {
   min-height: 100vh;
   display: grid;
@@ -116,9 +130,22 @@ a {
   border-bottom: 1px solid var(--borde);
 }
 .marca {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
   font-weight: 700;
   text-decoration: none;
   color: var(--texto);
+}
+@media (max-width: 480px) {
+  .logo-barra {
+    width: 72px;
+  }
+  .marca {
+    gap: 8px;
+    font-size: 0.85rem;
+  }
 }
 .barra-der {
   display: flex;
